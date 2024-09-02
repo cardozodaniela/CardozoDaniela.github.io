@@ -1,14 +1,13 @@
 body {
     background-color: white;
-}
-#titulo {
-    color: black;
-    font-size: 45px;
-    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-#titulo:hover{
-    color: pink;
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 50px;
 }
 
 #nombre {
@@ -21,22 +20,23 @@ p#nombre:hover {
 
 div.redes {
     font-size: 30px;
-    text-align: center;
-    margin-top: 40px;
-    margin-right: 800px;
+    text-align: left;
+    margin-top: 5%;
+    margin-left: 5%;
 }
 
-div.texto {
+div#textoprincipal {
     color: black;
-    font-size: 40px;
     text-align: center;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 100px;
+    font-size: 40px;
+    padding: 5%;
 }
+
 img {
-    width: 1300px;
-    height: 1000px;
+    width: 1200px;
+    height: 700px;
+    max-width: 100%;
+    height: auto;
     display: block;
    margin: 0 auto;
 }
@@ -45,21 +45,44 @@ img {
     margin: 0;
 }
 
-div.secundario {
-    margin-top: 100px;
+div#secundario {
+    margin-top: 10%;
     background-color: black;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
+    box-sizing: border-box;
+    font-size: clamp(1.5rem, 4vw, 3rem);
 }
-.parrafosdivididos p {
-    flex: 1;
-    box-sizing:border-box;
-    padding: 10px;
-    text-align: left;
-    margin-top: 30px;
-    margin-left: 0;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+#parrafosdivididos p {
+    padding: 1%;
+    justify-content: center;
+    margin-top: 2%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
 }
-.parrafosdivididos {
+div #parrafosdivididos {
     display: flex;
+}
+
+@media (max-width: 425px) {
+    #secundario {
+        display: none;
+    }
+    div#textoprincipal {
+        font-size: medium;    
+    }
+    #nombre {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    #titulo {
+        font-size: x-large;
+    }
+    div.redes {
+        font-size: 20px;
+        text-align: left;
+        margin-top: 5%;
+        margin-left: 5%;
+    }
 }
