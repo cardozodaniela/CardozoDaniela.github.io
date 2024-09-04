@@ -4,10 +4,10 @@ body {
     padding: 0;
 }
 
-h1 {
+#titulo h1 {
     color: black;
     text-align: center;
-    font-size: 50px;
+    font-size: 60px;
 }
 
 #nombre {
@@ -18,11 +18,14 @@ p#nombre:hover {
     text-decoration: underline;
 }
 
-div.redes {
-    font-size: 30px;
-    text-align: left;
+div#redes a{
+    text-align: center;
+    display: inline-block;
+}
+
+div#redes {
     margin-top: 5%;
-    margin-left: 5%;
+    margin-bottom: 5%;
 }
 
 div#textoprincipal {
@@ -41,12 +44,21 @@ img {
    margin: 0 auto;
 }
 
-.secundario h2{
+#buttongit img{
+width: 120px;
+height: auto;
+}
+
+#buttonlink img{
+    width: 100px;
+    height: auto;
+}
+
+#secundario h2{
     margin: 0;
 }
 
 div#secundario {
-    margin-top: 10%;
     background-color: black;
     color: white;
     font-size: 20px;
@@ -55,6 +67,7 @@ div#secundario {
 }
 
 #parrafosdivididos p {
+    font-size: xx-large;
     padding: 1%;
     justify-content: center;
     margin-top: 2%;
@@ -65,10 +78,19 @@ div #parrafosdivididos {
     display: flex;
 }
 
+@media (max-width: 768px) {
+    div#secundario h2{
+        font-size: xx-large;
+    }  
+    div#secundario p{
+        font-size: large; 
+        }  
+        div#textoprincipal {
+            font-size: x-large;    
+        }
+}
+
 @media (max-width: 425px) {
-    #secundario {
-        display: none;
-    }
     div#textoprincipal {
         font-size: medium;    
     }
@@ -76,13 +98,33 @@ div #parrafosdivididos {
         font-size: 12px;
         margin-left: 10px;
     }
-    #titulo {
-        font-size: x-large;
+    #titulo h1 {
+        font-size: xx-large;
     }
-    div.redes {
+    div#redes {
         font-size: 20px;
         text-align: left;
         margin-top: 5%;
         margin-left: 5%;
+    }
+    #buttongit img{
+        width: 60px;
+        height: auto;
+    }
+    #buttonlink img{
+    width: 50px;
+    height: auto;
+    }
+    div#secundario p{
+    font-size: medium; 
+    }
+    div#secundario h2{
+        font-size: large;
+    }
+    #botondesplegable {
+        background-color: black;
+    }
+    #botondesplegable:hover {
+        background-color: lightsalmon;
     }
 }
